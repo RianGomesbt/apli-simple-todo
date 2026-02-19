@@ -1,27 +1,16 @@
 package com.projecterian.demo.models;
 
 
-import javax.persistence.Column;
-
-import javax.persistence.Entity;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 
@@ -31,7 +20,7 @@ public class User {
     public interface CreateUser{}
     public interface UpdateUser{}
 
-    public static final String TABLE_NAME = "user";
+    public static final String TABLE_NAME = "users";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
