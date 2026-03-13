@@ -48,8 +48,9 @@ public class Task {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
+    public String setDescricao() {
         this.descricao = descricao;
+        return descricao;
     }
 
     public Task(){}
